@@ -1,24 +1,25 @@
-const downloadButton = document.getElementById('download-button');
-downloadButton.addEventListener('click', () => {
+const downloadButton = document.getElementById("download-button");
+downloadButton.addEventListener("click", () => {
   const resumeData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    address: document.getElementById('address').value,
-    school: document.getElementById('school').value,
-    degree: document.getElementById('degree').value,
-    major: document.getElementById('major').value,
-    graduationDate: document.getElementById('graduation-date').value,
-    company: document.getElementById('company').value,
-    title: document.getElementById('title').value,
-    startDate: document.getElementById('start-date').value,
-    endDate: document.getElementById('end-date').value,
-    skill1: document.getElementById('skill-1').value,
-    skill2: document.getElementById('skill-2').value,
-    skill3: document.getElementById('skill-3').value,
-    reference1: document.getElementById('reference-1').value,
-    reference2: document.getElementById('reference-2').value,
-    reference3: document.getElementById('reference-3').value,
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    address: document.getElementById("address").value,
+    summary: document.getElementById("summary").value,
+    school: document.getElementById("school").value,
+    degree: document.getElementById("degree").value,
+    major: document.getElementById("major").value,
+    graduationDate: document.getElementById("graduation-date").value,
+    company: document.getElementById("company").value,
+    title: document.getElementById("title").value,
+    startDate: document.getElementById("start-date").value,
+    endDate: document.getElementById("end-date").value,
+    skill1: document.getElementById("skill-1").value,
+    skill2: document.getElementById("skill-2").value,
+    skill3: document.getElementById("skill-3").value,
+    reference1: document.getElementById("reference-1").value,
+    reference2: document.getElementById("reference-2").value,
+    reference3: document.getElementById("reference-3").value,
   };
   const resumeTemplate = `
     <!DOCTYPE html>
@@ -56,6 +57,10 @@ downloadButton.addEventListener('click', () => {
         <li>Phone: ${resumeData.phone}</li>
         <li>Address: ${resumeData.address}</li>
       </ul>
+      <h2>Summary</h2>
+      <ul>
+        <li>${resumeData.summary}</li>
+      </ul>
       <h2>Education</h2>
       <ul>
         <li>School: ${resumeData.school}</li>
@@ -86,17 +91,16 @@ downloadButton.addEventListener('click', () => {
     </html>
   `;
 
-  const element = document.createElement('div');
+  const element = document.createElement("div");
   element.innerHTML = resumeTemplate;
 
   html2pdf(element, {
     margin: 10,
-    filename: 'resume.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
+    filename: "resume.pdf",
+    image: { type: "jpeg", quality: 0.98 },
     html2canvas: { scale: 2 },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-  }).then(function(pdf) {
-    pdf.save('resume.pdf');
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+  }).then(function (pdf) {
+    pdf.save("resume.pdf");
   });
-
-})
+});
