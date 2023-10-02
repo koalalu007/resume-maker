@@ -85,11 +85,18 @@ downloadButton.addEventListener('click', () => {
     </body>
     </html>
   `;
-  const resumeBlob = new Blob([resumeTemplate], { type : 'text/html' });
-  const resumeUrl = URL.createObjectURL(resumeBlob);
-  const resumeLink = document.createElement('a');
-  resumeLink.href = resumeUrl;
-  resumeLink.download = 'resume.html';
-  resumeLink.click();
-  URL.revokeObjectURL(resumeUrl);
+
+  const element = document.createElement('div');
+  element.innerHTML = resumeTemplate;
+
+  html2pdf(element, {
+    margin: 10,
+    filename: 'resume.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  }).then(function(pdf) {
+    pdf.save('resume.pdf');
+  });
+
 })
