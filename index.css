@@ -1,30 +1,45 @@
 body {
     background-color: #fff;
     font-family: sans-serif;
-     
+    background: radial-gradient(rgb(80, 43, 43) ,rgb(28, 102, 28),rgb(39, 39, 121));
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   }
   #resume-form {
     width: 500px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px white;
   }
   h1 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: whitesmoke;
   }
   input {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
   }
   #download-button {
-    width: 100%;
+    width: 99%;
+    align-items: center;
     padding: 10px;
+    margin: 10px 0px;
     background-color: #ff6347;
     color: #fff;
     border: none;
     cursor: pointer;
+  }
+  ::placeholder{
+    color: grey;
+    font-size: 16px;
+    letter-spacing: 1px;
   }
