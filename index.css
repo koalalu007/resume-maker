@@ -1,50 +1,63 @@
-html, body {
-  height: 100%;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+html,
 body {
-    background-color: #fff;
-    font-family: sans-serif;
-     
-  }
-  .container {
-    display: flex;
-    justify-content: space-between; /* Distribute space between the two sides */
-  }
-  
-  .side {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #ccc;
-  }
-  
-  #resume-form {
-    width: 100%;
-    max-width: 500px; /* Limit the form width */
-    /* Add other form styling here */
-  }
-  
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
-  
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-  #download-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #ff6347;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+  height: 100%;
+  background-color: #fff;
+}
+
+body {
+  background-color: #fff;
+  font-family: sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: space-between; /* Distribute space between the two sides */
+}
+
+.side {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+#resume-form {
+  width: 100%;
+  max-width: 500px; /* Limit the form width */
+  /* Add other form styling here */
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+  resize: vertical;
+}
+#download-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

@@ -1,37 +1,39 @@
-const downloadButton = document.getElementById('download-button');
+const downloadButton = document.getElementById("download-button");
 
-const inputFields = document.querySelectorAll('input'); // Select all input fields
+const inputFields = document.querySelectorAll("input"); // Select all input fields
 
 inputFields.forEach((inputField) => {
-  inputField.addEventListener('input', updateIframeContent);
+  inputField.addEventListener("input", updateIframeContent);
 });
 
 function updateIframeContent() {
   // Retrieve user input from the input fields
   const resumeData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    address: document.getElementById('address').value,
-    school: document.getElementById('school').value,
-    degree: document.getElementById('degree').value,
-    major: document.getElementById('major').value,
-    graduationDate: document.getElementById('graduation-date').value,
-    company: document.getElementById('company').value,
-    title: document.getElementById('title').value,
-    startDate: document.getElementById('start-date').value,
-    endDate: document.getElementById('end-date').value,
-    skill1: document.getElementById('skill-1').value,
-    skill2: document.getElementById('skill-2').value,
-    skill3: document.getElementById('skill-3').value,
-    reference1: document.getElementById('reference-1').value,
-    reference2: document.getElementById('reference-2').value,
-    reference3: document.getElementById('reference-3').value,
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    address: document.getElementById("address").value,
+    summary: document.getElementById("summary").value,
+    school: document.getElementById("school").value,
+    degree: document.getElementById("degree").value,
+    major: document.getElementById("major").value,
+    graduationDate: document.getElementById("graduation-date").value,
+    company: document.getElementById("company").value,
+    title: document.getElementById("title").value,
+    startDate: document.getElementById("start-date").value,
+    endDate: document.getElementById("end-date").value,
+    skill1: document.getElementById("skill-1").value,
+    skill2: document.getElementById("skill-2").value,
+    skill3: document.getElementById("skill-3").value,
+    reference1: document.getElementById("reference-1").value,
+    reference2: document.getElementById("reference-2").value,
+    reference3: document.getElementById("reference-3").value,
   };
 
   // Get the iframe element
-  const iframe = document.querySelector('iframe');
-  const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+  const iframe = document.querySelector("iframe");
+  const iframeDocument =
+    iframe.contentDocument || iframe.contentWindow.document;
   const iframeBody = iframeDocument.body;
 
   // Replace the content of the iframe with the user's data
@@ -70,6 +72,10 @@ function updateIframeContent() {
         <li>Email: ${resumeData.email}</li>
         <li>Phone: ${resumeData.phone}</li>
         <li>Address: ${resumeData.address}</li>
+      </ul>
+      <h2>Summary</h2>
+      <ul>
+        <li>${resumeData.summary}</li>
       </ul>
       <h2>Education</h2>
       <ul>
@@ -102,32 +108,34 @@ function updateIframeContent() {
   `;
 }
 
-downloadButton.addEventListener('click', () => {
+downloadButton.addEventListener("click", () => {
   // Retrieve user input from the main HTML page
   const resumeData = {
-    name: document.getElementById('name').value,
-    email: document.getElementById('email').value,
-    phone: document.getElementById('phone').value,
-    address: document.getElementById('address').value,
-    school: document.getElementById('school').value,
-    degree: document.getElementById('degree').value,
-    major: document.getElementById('major').value,
-    graduationDate: document.getElementById('graduation-date').value,
-    company: document.getElementById('company').value,
-    title: document.getElementById('title').value,
-    startDate: document.getElementById('start-date').value,
-    endDate: document.getElementById('end-date').value,
-    skill1: document.getElementById('skill-1').value,
-    skill2: document.getElementById('skill-2').value,
-    skill3: document.getElementById('skill-3').value,
-    reference1: document.getElementById('reference-1').value,
-    reference2: document.getElementById('reference-2').value,
-    reference3: document.getElementById('reference-3').value,
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    address: document.getElementById("address").value,
+    summary: document.getElementById("summary").value,
+    school: document.getElementById("school").value,
+    degree: document.getElementById("degree").value,
+    major: document.getElementById("major").value,
+    graduationDate: document.getElementById("graduation-date").value,
+    company: document.getElementById("company").value,
+    title: document.getElementById("title").value,
+    startDate: document.getElementById("start-date").value,
+    endDate: document.getElementById("end-date").value,
+    skill1: document.getElementById("skill-1").value,
+    skill2: document.getElementById("skill-2").value,
+    skill3: document.getElementById("skill-3").value,
+    reference1: document.getElementById("reference-1").value,
+    reference2: document.getElementById("reference-2").value,
+    reference3: document.getElementById("reference-3").value,
   };
 
   // Populate the iframe with the user data
-  const iframe = document.querySelector('iframe');
-  const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+  const iframe = document.querySelector("iframe");
+  const iframeDocument =
+    iframe.contentDocument || iframe.contentWindow.document;
   const iframeBody = iframeDocument.body;
 
   // Replace the content of the iframe with the user's data
@@ -166,6 +174,10 @@ downloadButton.addEventListener('click', () => {
         <li>Email: ${resumeData.email}</li>
         <li>Phone: ${resumeData.phone}</li>
         <li>Address: ${resumeData.address}</li>
+      </ul>
+      <h2>Summary</h2>
+      <ul>
+        <li>${resumeData.summary}</li>
       </ul>
       <h2>Education</h2>
       <ul>
@@ -200,11 +212,11 @@ downloadButton.addEventListener('click', () => {
   // Generate PDF from the updated iframe content
   html2pdf(iframeBody, {
     margin: 10,
-    filename: 'resume.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
+    filename: "resume.pdf",
+    image: { type: "jpeg", quality: 0.98 },
     html2canvas: { scale: 2 },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
   }).then(function (pdf) {
-    pdf.save('resume.pdf');
+    pdf.save("resume.pdf");
   });
 });
