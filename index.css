@@ -28,3 +28,8 @@ body {
     border: none;
     cursor: pointer;
   }
+
+  #date-specifier{
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
