@@ -1,7 +1,7 @@
 body {
     background-color: #fff;
     font-family: sans-serif;
-    background: radial-gradient(rgb(80, 43, 43) ,rgb(28, 102, 28),rgb(39, 39, 121));
+    background: linear-gradient(rgb(80, 43, 43) ,rgb(28, 102, 28),rgb(39, 39, 121));
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   }
   #resume-form {
