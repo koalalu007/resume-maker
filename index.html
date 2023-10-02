@@ -9,28 +9,29 @@
 <body>
   <div id="resume-form">
     <h1>Personal Information</h1>
-    <input type="text" name="name" placeholder="Name">
-    <input type="text" name="email" placeholder="Email">
-    <input type="text" name="phone" placeholder="Phone">
-    <input type="text" name="address" placeholder="Address">
+    <input type="text" name="name" id="name" placeholder="Name" required>
+    <input type="email" name="email" id="email" placeholder="Email" required>
+    <input type="tel" name="phone" id="phone" placeholder="Phone" required>
+    <input type="text" name="address" id="address" placeholder="Address" required>
     <h1>Education</h1>
-    <input type="text" name="school" placeholder="School">
-    <input type="text" name="degree" placeholder="Degree">
-    <input type="text" name="major" placeholder="Major">
-    <input type="text" name="graduation-date" placeholder="Graduation Date">
+    <input type="text" name="school" id="school" placeholder="School" required>
+    <input type="text" name="degree" id="degree" placeholder="Degree" required>
+    <input type="text" name="major" id="major" placeholder="Major" required>
+    <input type="date" name="graduation-date" id="graduation-date" placeholder="Graduation Date" required>
     <h1>Work Experience</h1>
-    <input type="text" name="company" placeholder="Company">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="start-date" placeholder="Start Date">
-    <input type="text" name="end-date" placeholder="End Date">
+    <input type="text" name="company" id="company" placeholder="Company" required>
+    <input type="text" name="title" id="title" placeholder="Title" required>
+    <input type="date" name="start-date" id="start-date" placeholder="Start Date" required>
+    <input type="date" name="end-date" id="end-date" placeholder="End Date" required>
     <h1>Skills</h1>
-    <input type="text" name="skill-1" placeholder="Skill 1">
-    <input type="text" name="skill-2" placeholder="Skill 2">
-    <input type="text" name="skill-3" placeholder="Skill 3">
+    <input type="text" name="skill-1" id="skill-1" placeholder="Skill 1" required>
+    <input type="text" name="skill-2" id="skill-2" placeholder="Skill 2" required>
+    <input type="text" name="skill-3" id="skill-3" placeholder="Skill 3" required>
     <h1>References</h1>
-    <input type="text" name="reference-1" placeholder="Reference 1">
-    <input type="text" name="reference-2" placeholder="Reference 2">
-    <input type="text" name="reference-3" placeholder="Reference 3">
+    <input type="text" name="reference-1" id="reference-1" placeholder="Reference 1" required>
+    <input type="text" name="reference-2" id="reference-2" placeholder="Reference 2" required>
+    <input type="text" name="reference-3" id="reference-3" placeholder="Reference 3" required>
+       
     <button id="download-button">Download PDF</button>
   </div>
   <script src="index.js"></script>

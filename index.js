@@ -47,9 +47,16 @@ downloadButton.addEventListener('click', () => {
         li {
           margin-bottom: 10px;
         }
+        #resume-form {
+          width: 500px;
+          margin: 0 auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+        }
       </style>
     </head>
     <body>
+    <div id="resume-form">
       <h1>${resumeData.name}</h1>
       <ul>
         <li>Email: ${resumeData.email}</li>
@@ -82,6 +89,7 @@ downloadButton.addEventListener('click', () => {
         <li>${resumeData.reference2}</li>
         <li>${resumeData.reference3}</li>
       </ul>
+      </div>
     </body>
     </html>
   `;
