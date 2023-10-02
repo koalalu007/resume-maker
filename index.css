@@ -1,0 +1,30 @@
+body {
+    background-color: #fff;
+    font-family: sans-serif;
+     
+  }
+  #resume-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  #download-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
