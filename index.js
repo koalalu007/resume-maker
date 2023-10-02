@@ -21,69 +21,120 @@ downloadButton.addEventListener('click', () => {
     reference3: document.getElementById('reference-3').value,
   };
   const resumeTemplate = `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Resume</title>
-      <style>
-        body {
-          background-color: #fff;
-          font-family: sans-serif;
-        }
-    
-        h1 {
-          font-size: 24px;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
-    
-        ul {
-          list-style-type: none;
-          padding: 0;
-        }
-    
-        li {
-          margin-bottom: 10px;
-        }
-      </style>
-    </head>
-    <body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+      body {
+        background-color: #f7f7f7;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+  
+      h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #007BFF;
+      }
+  
+      h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        color: #333;
+      }
+  
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+  
+      li {
+        margin-bottom: 10px;
+        color: #555;
+      }
+  
+      .contact-info {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+  
+      .contact-info span {
+        color: #007BFF;
+        font-weight: bold;
+      }
+  
+      .education {
+        border-top: 2px solid #007BFF;
+        padding-top: 20px;
+      }
+  
+      .work-experience {
+        border-top: 2px solid #007BFF;
+        padding-top: 20px;
+      }
+  
+      .skills {
+        border-top: 2px solid #007BFF;
+        padding-top: 20px;
+      }
+  
+      .references {
+        border-top: 2px solid #007BFF;
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
       <h1>${resumeData.name}</h1>
+      <div class="contact-info">
+        <span>Email:</span> ${resumeData.email}<br>
+        <span>Phone:</span> ${resumeData.phone}<br>
+        <span>Address:</span> ${resumeData.address}
+      </div>
+      <h2 class="education">Education</h2>
       <ul>
-        <li>Email: ${resumeData.email}</li>
-        <li>Phone: ${resumeData.phone}</li>
-        <li>Address: ${resumeData.address}</li>
+        <li><span>School:</span> ${resumeData.school}</li>
+        <li><span>Degree:</span> ${resumeData.degree}</li>
+        <li><span>Major:</span> ${resumeData.major}</li>
+        <li><span>Graduation Date:</span> ${resumeData.graduationDate}</li>
       </ul>
-      <h2>Education</h2>
+      <h2 class="work-experience">Work Experience</h2>
       <ul>
-        <li>School: ${resumeData.school}</li>
-        <li>Degree: ${resumeData.degree}</li>
-        <li>Major: ${resumeData.major}</li>
-        <li>Graduation Date: ${resumeData.graduationDate}</li>
+        <li><span>Company:</span> ${resumeData.company}</li>
+        <li><span>Title:</span> ${resumeData.title}</li>
+        <li><span>Start Date:</span> ${resumeData.startDate}</li>
+        <li><span>End Date:</span> ${resumeData.endDate}</li>
       </ul>
-      <h2>Work Experience</h2>
-      <ul>
-        <li>Company: ${resumeData.company}</li>
-        <li>Title: ${resumeData.title}</li>
-        <li>Start Date: ${resumeData.startDate}</li>
-        <li>End Date: ${resumeData.endDate}</li>
-      </ul>
-      <h2>Skills</h2>
+      <h2 class="skills">Skills</h2>
       <ul>
         <li>${resumeData.skill1}</li>
         <li>${resumeData.skill2}</li>
         <li>${resumeData.skill3}</li>
       </ul>
-      <h2>References</h2>
+      <h2 class="references">References</h2>
       <ul>
         <li>${resumeData.reference1}</li>
         <li>${resumeData.reference2}</li>
         <li>${resumeData.reference3}</li>
       </ul>
-    </body>
-    </html>
+    </div>
+  </body>
+  </html>
+  
   `;
   const resumeBlob = new Blob([resumeTemplate], { type : 'text/html' });
   const resumeUrl = URL.createObjectURL(resumeBlob);
