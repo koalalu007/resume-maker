@@ -1,12 +1,11 @@
 body {
     background-color: #fff;
-    font-family: sans-serif;
-     
+    font-family: 'Poppins', sans-serif;  
   }
   #resume-form {
     width: 500px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #ccc;
   }
   h1 {
@@ -19,6 +18,7 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     margin-bottom: 10px;
+    border-radius: 15px;
   }
   #download-button {
     width: 100%;
