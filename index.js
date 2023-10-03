@@ -1,9 +1,13 @@
 const downloadButton = document.getElementById("download-button");
 
 const inputFields = document.querySelectorAll("input"); // Select all input fields
+const textAreaFields = document.querySelectorAll("textarea");
 
 inputFields.forEach((inputField) => {
   inputField.addEventListener("input", updateIframeContent);
+});
+textAreaFields.forEach((textAreaField) => {
+  textAreaField.addEventListener("input", updateIframeContent);
 });
 
 function updateIframeContent() {
