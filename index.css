@@ -28,11 +28,8 @@ body {
   flex: 1;
   padding: 20px;
   border: none;
-  background-image: linear-gradient(
-    90.1deg,
-    rgba(84, 212, 228, 1) 0.2%,
-    rgba(68, 36, 164, 1) 99.9%
-  );
+  background-color: #52acff;
+  background-image: linear-gradient(135deg, #52acff 25%, #ffe32c 100%);
 }
 
 #resume-form {
@@ -55,7 +52,8 @@ h1 {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: rgb(222, 255, 104);
+  color: black;
+  font-family: cursive;
 }
 input {
   width: 60%;
