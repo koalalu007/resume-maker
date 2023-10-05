@@ -47,6 +47,7 @@ input {
   margin-bottom: 10px;
   border-radius: 20px;
 }
+
 input:hover{
   border:3px solid #ccc
 }
