@@ -11,7 +11,7 @@ body {
 
 body {
   background-color: #fff;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .container {
   display: flex;
@@ -49,16 +49,15 @@ h1 {
   color: #007bff;
 }
 input {
-  width: calc(100% - 20px);
-  padding: 12px;
-  border: 1px solid #ced4da;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #495057;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 20px;
 }
-input:hover {
-  border: 3px solid #ccc;
+
+input:hover{
+  border:3px solid #ccc
 }
 
 textarea {
@@ -70,8 +69,8 @@ textarea {
   border-radius: 20px;
 }
 
-textarea:hover {
-  border: 3px solid #ccc;
+textarea:hover{
+  border:3px solid #ccc
 }
 
 .download {
@@ -117,4 +116,8 @@ body::-webkit-scrollbar-thumb {
     color-stop(0.72, rgb(33, 136, 245)),
     color-stop(0.86, rgb(0, 123, 255))
   );
+}
+
+#download-button:hover{
+  background-color: #f64b2d;
 }
