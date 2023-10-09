@@ -237,5 +237,5 @@ downloadButton.addEventListener("click", () => {
   } else {
     // Show a message or take appropriate action when all fields are empty
     alert("Please enter some data before generating the resume.");
-  }
+  }
 });
