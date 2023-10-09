@@ -35,6 +35,9 @@ body {
   margin: 2rem;
   margin-right: 0;
 }
+#name{
+  text-transform: capitalize;
+}
 
 iframe {
   width: 100%;
@@ -55,10 +58,9 @@ input {
   margin-bottom: 20px;
   border-radius: 5px;
   font-size: 16px;
-  color: #495057;
 }
 input:hover {
-  border: 3px solid #ccc;
+  background-color: #badcef;
 }
 
 textarea {
@@ -72,6 +74,7 @@ textarea {
 
 textarea:hover {
   border: 3px solid #ccc;
+  background-color: #badcef;
 }
 
 .download {
@@ -94,6 +97,9 @@ textarea:hover {
 
 #download-button:hover {
   background-color: #0056b3;
+} 
+#download-button:active {
+  background-color: #007bff;
 } 
 
 body::-webkit-scrollbar-track {
