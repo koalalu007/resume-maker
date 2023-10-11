@@ -1,7 +1,7 @@
 const downloadButton = document.getElementById("download-button");
-
 const inputFields = document.querySelectorAll("input"); // Select all input fields
 const textAreaFields = document.querySelectorAll("textarea");
+const clearImageButton = document.getElementById("clear-image-button");
 
 inputFields.forEach((inputField) => {
   inputField.addEventListener("input", updateIframeContent);
@@ -10,9 +10,17 @@ textAreaFields.forEach((textAreaField) => {
   textAreaField.addEventListener("input", updateIframeContent);
 });
 
+clearImageButton.addEventListener("click", function () {
+  // Clear the input field and the image preview
+  const profileImageInput = document.getElementById("profile-image");
+  profileImageInput.value = ""; // Clear the input field
+  updateIframeContent();
+});
+
 function updateIframeContent() {
   // Retrieve user input from the input fields
   const resumeData = {
+    profileImage: document.getElementById("profile-image").files[0],
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
     phone: document.getElementById("phone").value,
@@ -39,6 +47,11 @@ function updateIframeContent() {
   const iframeDocument =
     iframe.contentDocument || iframe.contentWindow.document;
   const iframeBody = iframeDocument.body;
+
+  // Create an object URL for the profileImage
+  const profileImageURL = resumeData.profileImage
+    ? URL.createObjectURL(resumeData.profileImage)
+    : "https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg";
 
   // Replace the content of the iframe with the user's data
   iframeBody.innerHTML = `
@@ -68,15 +81,45 @@ function updateIframeContent() {
         li {
           margin-bottom: 10px;
         }
+
+        .personalInfo {
+          display: flex;
+          align-items: center; /* Vertically center the content */
+        }
+
+        .personalInfo img {
+          width: 200px; /* Set the maximum width of the image */
+          height: 200px;
+          margin-right: 20px; /* Add some spacing between the image and text */
+          border-radius: 50%; /* Make the image round */
+        }
+
+        .personalInfo h1 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .personalInfo ul {
+          list-style-type: none;
+          padding: 0;
+        }
+
+        .personalInfo li {
+          margin-bottom: 10px;
+        }
       </style>
     </head>
     <body>
-      <h1>${resumeData.name}</h1>
+      <div class="personalInfo">
+      <img src="${profileImageURL}" alt=" "/>
       <ul>
+        <li><h1>${resumeData.name}</h1></li>
         <li>Email: ${resumeData.email}</li>
         <li>Phone: ${resumeData.phone}</li>
         <li>Address: ${resumeData.address}</li>
       </ul>
+      </div>
       <h2>Summary</h2>
       <ul>
         <li>${resumeData.summary}</li>
@@ -136,13 +179,18 @@ downloadButton.addEventListener("click", () => {
     reference3: document.getElementById("reference-3").value,
   };
 
+  // Create an object URL for the profileImage
+  const profileImageURL = resumeData.profileImage
+     ? URL.createObjectURL(resumeData.profileImage)
+    : "https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg";
+
   // Populate the iframe with the user data
   const iframe = document.querySelector("iframe");
   const iframeDocument =
     iframe.contentDocument || iframe.contentWindow.document;
   const iframeBody = iframeDocument.body;
 
-  // Replace the content of the iframe with the user's data
+  // Replace the content of the iframe with the user's data, including the profile image
   iframeBody.innerHTML = `
     <!DOCTYPE html>
     <html lang="en">
@@ -170,15 +218,45 @@ downloadButton.addEventListener("click", () => {
         li {
           margin-bottom: 10px;
         }
+
+        .personalInfo {
+          display: flex;
+          align-items: center; /* Vertically center the content */
+        }
+
+        .personalInfo img {
+          width: 200px; /* Set the maximum width of the image */
+          height: 200px;
+          margin-right: 20px; /* Add some spacing between the image and text */
+          border-radius: 50%; /* Make the image round */
+        }
+
+        .personalInfo h1 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .personalInfo ul {
+          list-style-type: none;
+          padding: 0;
+        }
+
+        .personalInfo li {
+          margin-bottom: 10px;
+        }
       </style>
     </head>
     <body>
-      <h1>${resumeData.name}</h1>
+      <div class="personalInfo">
+      <img src="${profileImageURL}" alt=" "/>
       <ul>
+        <li><h1>${resumeData.name}</h1></li>
         <li>Email: ${resumeData.email}</li>
         <li>Phone: ${resumeData.phone}</li>
         <li>Address: ${resumeData.address}</li>
       </ul>
+      </div>
       <h2>Summary</h2>
       <ul>
         <li>${resumeData.summary}</li>
@@ -221,6 +299,14 @@ downloadButton.addEventListener("click", () => {
     html2canvas: { scale: 2 },
     jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
   }).then(function (pdf) {
+    // Save the PDF and display the profile image
     pdf.save("resume.pdf");
+    displayProfileImage(profileImageURL);
   });
 });
+
+// Function to display the profile image
+function displayProfileImage(url) {
+  const profileImage = document.querySelector(".personalInfo img");
+  profileImage.src = url;
+}
