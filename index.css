@@ -19,7 +19,41 @@ body {
   /* Distribute space between the two sides */
   background-color: #9eddff;
 }
+/* Layout for tablets and smaller laptops (max-width 1024px) */
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+    
+  }
 
+  .container {
+    width: 90%;
+  }
+}
+
+/* Layout for mobile devices (max-width 768px) */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Layout for small mobile devices (max-width 480px) */
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+}
 .side {
   flex: 1;
   padding: 20px;
@@ -157,3 +191,4 @@ body::-webkit-scrollbar-thumb {
     color-stop(0.86, rgb(0, 123, 255))
   );
 }
+
