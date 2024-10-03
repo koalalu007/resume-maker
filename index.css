@@ -48,6 +48,7 @@ h1 {
   margin-bottom: 20px;
   color: #007bff;
 }
+
 input {
   width: calc(100% - 20px);
   padding: 12px;
@@ -79,6 +80,38 @@ textarea:hover {
   align-items: center;
   justify-content: center;
 }
+
+.profile-image-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spacing between elements */
+}
+
+/* Style for the "Upload Profile Image" label */
+.profile-image-upload label {
+margin-bottom:10px;
+}
+
+/* Style for the "Clear Image" button */
+#clear-image-button {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #495057;
+  cursor: pointer;
+  height: 54px;
+  
+  margin-bottom: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#clear-image-button:hover {
+  background-color: #ced4da;
+  color: #fff;
+}
+
 
 #download-button {
   width: 80%;
