@@ -35,6 +35,9 @@ body {
   margin: 2rem;
   margin-right: 0;
 }
+#name{
+  text-transform: capitalize;
+}
 
 iframe {
   width: 100%;
@@ -48,6 +51,7 @@ h1 {
   margin-bottom: 20px;
   color: #007bff;
 }
+
 input {
   width: calc(100% - 20px);
   padding: 12px;
@@ -55,10 +59,9 @@ input {
   margin-bottom: 20px;
   border-radius: 5px;
   font-size: 16px;
-  color: #495057;
 }
 input:hover {
-  border: 3px solid #ccc;
+  background-color: #badcef;
 }
 
 textarea {
@@ -72,6 +75,7 @@ textarea {
 
 textarea:hover {
   border: 3px solid #ccc;
+  background-color: #badcef;
 }
 
 .download {
@@ -79,6 +83,38 @@ textarea:hover {
   align-items: center;
   justify-content: center;
 }
+
+.profile-image-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spacing between elements */
+}
+
+/* Style for the "Upload Profile Image" label */
+.profile-image-upload label {
+margin-bottom:10px;
+}
+
+/* Style for the "Clear Image" button */
+#clear-image-button {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #495057;
+  cursor: pointer;
+  height: 54px;
+  
+  margin-bottom: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#clear-image-button:hover {
+  background-color: #ced4da;
+  color: #fff;
+}
+
 
 #download-button {
   width: 80%;
@@ -94,6 +130,9 @@ textarea:hover {
 
 #download-button:hover {
   background-color: #0056b3;
+} 
+#download-button:active {
+  background-color: #007bff;
 } 
 
 body::-webkit-scrollbar-track {

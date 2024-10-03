@@ -30,17 +30,47 @@
 
     li {
       margin-bottom: 10px;
+    } 
+    
+    .personalInfo {
+      display: flex;
+      align-items: center; /* Vertically center the content */
+    }
+
+    .personalInfo img {
+      width: 200px; /* Set the maximum width of the image */
+      height: 200px;
+      margin-right: 20px; /* Add some spacing between the image and text */
+      border-radius: 50%; /* Make the image round */
+    }
+
+    .personalInfo h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .personalInfo ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .personalInfo li {
+      margin-bottom: 10px;
     }
   </style>
 </head>
 
 <body>
-  <h1>Name : Your Name</h1>
+  <div class="personalInfo">
+  <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg"/> 
   <ul>
+    <li><h1>Name : Your Name</h1></li>
     <li>Email: email</li>
     <li>Phone: phone</li>
     <li>Address: address</li>
   </ul>
+  </div>
   <h2>Summary</h2>
   <ul>
     <li>Write something about yourself</li>
