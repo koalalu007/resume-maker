@@ -26,6 +26,11 @@ function collectAndValidateData() {
     skill1: document.getElementById("skill-1").value,
     skill2: document.getElementById("skill-2").value,
     skill3: document.getElementById("skill-3").value,
+
+    achievement1: document.getElementById("Achievement-1").value,
+    achievement2: document.getElementById("Achievement-2").value,
+    achievement3: document.getElementById("Achievement-3").value,
+
     reference1: document.getElementById("reference-1").value,
     reference2: document.getElementById("reference-2").value,
     reference3: document.getElementById("reference-3").value,
@@ -87,6 +92,9 @@ function updateIframeContent() {
     skill1: document.getElementById("skill-1").value,
     skill2: document.getElementById("skill-2").value,
     skill3: document.getElementById("skill-3").value,
+    achievement1: document.getElementById("Achievement-1").value,
+    achievement2: document.getElementById("Achievement-2").value,
+    achievement3: document.getElementById("Achievement-3").value,
     reference1: document.getElementById("reference-1").value,
     reference2: document.getElementById("reference-2").value,
     reference3: document.getElementById("reference-3").value,
@@ -213,6 +221,12 @@ function updateIframeContent() {
           <li>${resumeData.skill2}</li>
           <li>${resumeData.skill3}</li>
         </ul>
+        <h2>Achievements</h2>
+        <ul>
+          <li>${resumeData.achievement1}</li>
+          <li>${resumeData.achievement2}</li>
+          <li>${resumeData.achievement3}</li>
+        </ul>
         <h2>References</h2>
         <ul>
           <li>${resumeData.reference1}</li>
@@ -268,6 +282,10 @@ downloadDOCXButton.addEventListener("click", () => {
       <p>${resumeData.skill1}</p>
       <p>${resumeData.skill2}</p>
       <p>${resumeData.skill3}</p>
+      <h2>Achievements</h2>
+      <p>${resumeData.achievement1}</p>
+      <p>${resumeData.achievement2}</p>
+      <p>${resumeData.achievement3}</p>
       <h2>References</h2>
       <p>${resumeData.reference1}</p>
       <p>${resumeData.reference2}</p>
