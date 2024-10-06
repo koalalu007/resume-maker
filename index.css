@@ -204,4 +204,38 @@ body::-webkit-scrollbar-thumb {
 
 #image-preview {
   margin-top: 10px;
+
+
+/* Header and footer styling */
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
 }
