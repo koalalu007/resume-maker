@@ -29,6 +29,8 @@ function collectAndValidateData() {
     reference1: document.getElementById("reference-1").value,
     reference2: document.getElementById("reference-2").value,
     reference3: document.getElementById("reference-3").value,
+    project1: document.getElementById("project-1").value,
+    project2: document.getElementById("project-2").value,
   };
 
   // Check if all required fields are filled
@@ -90,6 +92,8 @@ function updateIframeContent() {
     reference1: document.getElementById("reference-1").value,
     reference2: document.getElementById("reference-2").value,
     reference3: document.getElementById("reference-3").value,
+    project1: document.getElementById("project-1").value,
+    project2: document.getElementById("project-2").value,
   };
 
   // Check if any of the required input fields or text areas are empty
@@ -219,6 +223,11 @@ function updateIframeContent() {
           <li>${resumeData.reference2}</li>
           <li>${resumeData.reference3}</li>
         </ul>
+        <h2>Projects</h2>
+        <ul>
+          <li>${resumeData.project1}</li>
+          <li>${resumeData.project2}</li>
+        </ul>
       </body>
       </html>
     `;
@@ -272,6 +281,9 @@ downloadDOCXButton.addEventListener("click", () => {
       <p>${resumeData.reference1}</p>
       <p>${resumeData.reference2}</p>
       <p>${resumeData.reference3}</p>
+      <h2>Projects</h2>
+      <p>${resumeData.project1}</p>
+      <p>${resumeData.project2}</p>
     `;
 
     // Convert content to a DOCX Blob
