@@ -153,7 +153,7 @@ margin-bottom:10px;
 }
 
 
-#download-button {
+#download-pdf {
   width: 80%;
   padding: 12px;
   background-color: #007bff;
@@ -165,10 +165,46 @@ margin-bottom:10px;
   transition: background-color 0.3s ease;
 }
 
-#download-button:hover {
+#download-pdf:hover {
   background-color: #0056b3;
 } 
-#download-button:active {
+#download-pdf:active {
+  background-color: #007bff;
+} 
+#download-docx {
+  width: 80%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+#download-docx:hover {
+  background-color: #0056b3;
+} 
+#download-docx:active {
+  background-color: #007bff;
+} 
+#download-html {
+  width: 80%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+#download-html:hover {
+  background-color: #0056b3;
+} 
+#download-html:active {
   background-color: #007bff;
 } 
 
@@ -195,3 +231,49 @@ body::-webkit-scrollbar-thumb {
   );
 }
 
+.required {
+  color: red; /* Change the color to red */
+  font-weight: bold; /* Make it bold */
+  margin-left: 5px; /* Add some space between the label and the indicator */
+}
+.profile-image-upload {
+  margin-bottom: 20px; /* Add some space below the profile image upload */
+}
+
+#image-preview {
+  margin-top: 10px;
+
+
+/* Header and footer styling */
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
+}
