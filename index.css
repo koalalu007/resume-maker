@@ -6,42 +6,79 @@
 html,
 body {
   height: 100%;
-  background-color: #fff;
+  background-color: #75d2e4;
 }
 
 body {
-  background-color: #fff;
+  background-color: #75d2e4;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .container {
   display: flex;
   justify-content: space-between;
   /* Distribute space between the two sides */
-  background-color: #9eddff;
+  background-color: #75d2e4;
+}
+/* Layout for tablets and smaller laptops (max-width 1024px) */
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+
+  }
+
+  .container {
+    width: 90%;
+  }
 }
 
+/* Layout for mobile devices (max-width 768px) */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* Layout for small mobile devices (max-width 480px) */
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+}
 .side {
-  flex: 1;
+  flex: 2;
   padding: 20px;
   border: none;
 }
 
 #resume-form {
-  width: 40px;
-  padding: 40px;
+ 
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  margin: 2rem;
-  margin-right: 0;
+  background-color: #fff;
+
 }
 #name{
   text-transform: capitalize;
 }
-
+.heading {
+  font-size: 40px;
+  font-style: inherit;
+  font-weight: bold;
+  margin-left: 43%;
+  color: #000000;
+}
 iframe {
   width: 100%;
-  height: 100%;
+  height: 30%;
   border-radius: 1rem;
 }
 
@@ -116,7 +153,7 @@ margin-bottom:10px;
 }
 
 
-#download-button {
+#download-pdf {
   width: 80%;
   padding: 12px;
   background-color: #007bff;
@@ -128,10 +165,46 @@ margin-bottom:10px;
   transition: background-color 0.3s ease;
 }
 
-#download-button:hover {
+#download-pdf:hover {
   background-color: #0056b3;
 } 
-#download-button:active {
+#download-pdf:active {
+  background-color: #007bff;
+} 
+#download-docx {
+  width: 80%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+#download-docx:hover {
+  background-color: #0056b3;
+} 
+#download-docx:active {
+  background-color: #007bff;
+} 
+#download-html {
+  width: 80%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+#download-html:hover {
+  background-color: #0056b3;
+} 
+#download-html:active {
   background-color: #007bff;
 } 
 
@@ -156,4 +229,51 @@ body::-webkit-scrollbar-thumb {
     color-stop(0.72, rgb(33, 136, 245)),
     color-stop(0.86, rgb(0, 123, 255))
   );
+}
+
+.required {
+  color: red; /* Change the color to red */
+  font-weight: bold; /* Make it bold */
+  margin-left: 5px; /* Add some space between the label and the indicator */
+}
+.profile-image-upload {
+  margin-bottom: 20px; /* Add some space below the profile image upload */
+}
+
+#image-preview {
+  margin-top: 10px;
+
+
+/* Header and footer styling */
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #666;
 }
