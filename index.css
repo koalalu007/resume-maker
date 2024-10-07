@@ -1,279 +1,284 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html,
-body {
-  height: 100%;
-  background-color: #75d2e4;
-}
-
-body {
-  background-color: #75d2e4;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-.container {
-  display: flex;
-  justify-content: space-between;
-  /* Distribute space between the two sides */
-  background-color: #75d2e4;
-}
-/* Layout for tablets and smaller laptops (max-width 1024px) */
-@media only screen and (max-width: 1024px) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
   body {
-    font-size: 16px;
-
+    height: 100%;
+    background-color: #75d2e4;
   }
-
-  .container {
-    width: 90%;
-  }
-}
-
-/* Layout for mobile devices (max-width 768px) */
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
-}
-
-/* Layout for small mobile devices (max-width 480px) */
-@media only screen and (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-
-  .container {
-    width: 100%;
-    padding: 5px;
-  }
-}
-.side {
-  flex: 2;
-  padding: 20px;
-  border: none;
-}
-
-#resume-form {
- 
-  border-radius: 20px;
-  background-color: #fff;
-
-}
-#name{
-  text-transform: capitalize;
-}
-.heading {
-  font-size: 40px;
-  font-style: inherit;
-  font-weight: bold;
-  margin-left: 43%;
-  color: #000000;
-}
-iframe {
-  width: 100%;
-  height: 30%;
-  border-radius: 1rem;
-}
-
-h1 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #007bff;
-}
-
-input {
-  width: calc(100% - 20px);
-  padding: 12px;
-  border: 1px solid #ced4da;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  font-size: 16px;
-}
-input:hover {
-  background-color: #badcef;
-}
-
-textarea {
-  width: 100%;
-  height: 5rem;
-  margin-bottom: 20px;
-  padding: 10px;
-  resize: vertical;
-  border-radius: 20px;
-}
-
-textarea:hover {
-  border: 3px solid #ccc;
-  background-color: #badcef;
-}
-
-.download {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-image-upload {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Spacing between elements */
-}
-
-/* Style for the "Upload Profile Image" label */
-.profile-image-upload label {
-margin-bottom:10px;
-}
-
-/* Style for the "Clear Image" button */
-#clear-image-button {
-  background-color: #fff;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  padding: 8px 16px;
-  font-size: 16px;
-  color: #495057;
-  cursor: pointer;
-  height: 54px;
   
-  margin-bottom: 20px;
-  transition: background-color 0.3s, color 0.3s;
-}
+  body {
+    background-color: #75d2e4;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute space between the two sides */
+    background-color: #75d2e4;
+  }
+  /* Layout for tablets and smaller laptops (max-width 1024px) */
+  @media only screen and (max-width: 1024px) {
+    body {
+      font-size: 16px;
+  
+    }
+  
+    .container {
+      width: 90%;
+    }
+  }
+  
+  /* Layout for mobile devices (max-width 768px) */
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  /* Layout for small mobile devices (max-width 480px) */
+  @media only screen and (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 5px;
+    }
+  }
+  .side {
+    flex: 2;
+    padding: 20px;
+    border: none;
+  }
+  
+  #resume-form {
+   
+    border-radius: 20px;
+    background-color: #fff;
+  
+  }
+  #name{
+    text-transform: capitalize;
+  }
+  .heading {
+    font-size: 40px;
+    font-style: inherit;
+    font-weight: bold;
+    margin-left: 43%;
+    color: #000000;
+  }
+  iframe {
+    width: 100%;
+    height: 30%;
+    border-radius: 1rem;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 1px solid #ced4da;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  input:hover {
+    background-color: #badcef;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 20px;
+    padding: 10px;
+    resize: vertical;
+    border-radius: 20px;
+  }
+  
+  textarea:hover {
+    border: 3px solid #ccc;
+    background-color: #badcef;
+  }
+  
+  .download {
+    display:flex;
+    align-items: center;
+    justify-content:space-around;
+  }
 
-#clear-image-button:hover {
-  background-color: #ced4da;
-  color: #fff;
-}
-
-
-#download-pdf {
-  width: 80%;
-  padding: 12px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-#download-pdf:hover {
-  background-color: #0056b3;
-} 
-#download-pdf:active {
-  background-color: #007bff;
-} 
-#download-docx {
-  width: 80%;
-  padding: 12px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-#download-docx:hover {
-  background-color: #0056b3;
-} 
-#download-docx:active {
-  background-color: #007bff;
-} 
-#download-html {
-  width: 80%;
-  padding: 12px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-}
-
-#download-html:hover {
-  background-color: #0056b3;
-} 
-#download-html:active {
-  background-color: #007bff;
-} 
-
-body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #f5f5f5;
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar {
-  width: 10px;
-  background-color: #f5f5f5;
-}
-
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0.44, rgb(68, 112, 198)),
-    color-stop(0.72, rgb(33, 136, 245)),
-    color-stop(0.86, rgb(0, 123, 255))
-  );
-}
-
-.required {
-  color: red; /* Change the color to red */
-  font-weight: bold; /* Make it bold */
-  margin-left: 5px; /* Add some space between the label and the indicator */
-}
-.profile-image-upload {
-  margin-bottom: 20px; /* Add some space below the profile image upload */
-}
-
-#image-preview {
-  margin-top: 10px;
-
-
-/* Header and footer styling */
-header {
-  background-color: #f8f9fa;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-header h1 {
-  font-size: 2rem;
-  margin: 0;
-  color: #333;
-}
-
-header p {
-  font-size: 1rem;
-  color: #666;
-}
-
-footer {
-  background-color: #f8f9fa;
-  padding: 10px;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: #666;
-}
+  .download button{
+    margin: 8px;
+  }
+  
+  .profile-image-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spacing between elements */
+  }
+  
+  /* Style for the "Upload Profile Image" label */
+  .profile-image-upload label {
+  margin-bottom:10px;
+  }
+  
+  /* Style for the "Clear Image" button */
+  #clear-image-button {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #495057;
+    cursor: pointer;
+    height: 54px;
+    
+    margin-bottom: 20px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #clear-image-button:hover {
+    background-color: #ced4da;
+    color: #fff;
+  }
+  
+  
+  #download-pdf {
+    width: 80%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #download-pdf:hover {
+    background-color: #0056b3;
+  } 
+  #download-pdf:active {
+    background-color: #007bff;
+  } 
+  #download-docx {
+    width: 80%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #download-docx:hover {
+    background-color: #0056b3;
+  } 
+  #download-docx:active {
+    background-color: #007bff;
+  } 
+  #download-html {
+    width: 80%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #download-html:hover {
+    background-color: #0056b3;
+  } 
+  #download-html:active {
+    background-color: #007bff;
+  } 
+  
+  body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.44, rgb(68, 112, 198)),
+      color-stop(0.72, rgb(33, 136, 245)),
+      color-stop(0.86, rgb(0, 123, 255))
+    );
+  }
+  
+  .required {
+    color: red; /* Change the color to red */
+    font-weight: bold; /* Make it bold */
+    margin-left: 5px; /* Add some space between the label and the indicator */
+  }
+  .profile-image-upload {
+    margin-bottom: 20px; /* Add some space below the profile image upload */
+  }
+  
+  #image-preview {
+    margin-top: 10px;
+  }
+  
+  
+  /* Header and footer styling */
+  header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  header p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #666;
+  }
