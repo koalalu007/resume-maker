@@ -1,107 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500&display=swap"
-      rel="stylesheet">
-  <title>Resume</title>
-  <style>
-    body {
-      background-color: #fff;
-      font-family: 'Poppins', sans-serif;
-
-    }
-
-    h1 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 10px;
-    } 
-    
-    .personalInfo {
-      display: flex;
-      
-      align-items: center; /* Vertically center the content */
-    }
-
-    .personalInfo img {
-      width: 200px; /* Set the maximum width of the image */
-      height: 200px;
-      margin-right: 20px; /* Add some spacing between the image and text */
-      border-radius: 50%; /* Make the image round */
-    }
-
-    .personalInfo h1 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .personalInfo ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .personalInfo li {
-      margin-bottom: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            margin-bottom: 5px;
+        }
+        h1 {
+            font-size: 28px;
+        }
+        p {
+            margin: 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            border-bottom: 2px solid #000;
+            margin-bottom: 10px;
+        }
+        .sub-title {
+            font-weight: bold;
+        }
+    </style>
 </head>
-
 <body>
-  <div><h2>Resume Template</h2><div></div>
-  <div class="personalInfo">
-  <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg"/> 
-  <ul>
-    <li><h1>Name : Your Name</h1></li>
-    <li>Email: email</li>
-    <li>Phone: phone</li>
-    <li>Address: address</li>
-  </ul>
-  </div>
-  <h2>Summary</h2>
-  <ul>
-    <li>Write something about yourself</li>
-  </ul>
-  <h2>Education</h2>
-  <ul>
-    <li>School: school</li>
-    <li>Degree: degree</li>
-    <li>Major: major</li>
-    <li>Graduation Date: graduationDate</li>
-  </ul>
-  <h2>Work Experience</h2>
-  <ul>
-    <li>Company: company</li>
-    <li>Title: title</li>
-    <li>Start Date: startDate</li>
-    <li>End Date: endDate</li>
-  </ul>
-  <h2>Skills</h2>
-  <ul>
-    <li>skill1</li>
-    <li>skill2</li>
-    <li>skill3</li>
-  </ul>
-  <h2>References</h2>
-  <ul>
-    <li>reference1</li>
-    <li>reference2</li>
-    <li>reference3</li>
-  </ul>
+    <div class="container">
+        <h1>Your Name</h1>
+        <p>Your_Name@gmail.com | (+91) 0000000000</p>
+        <br>
+        <p>GitHub: @full-name</p>
+        <p>LinkedIn: you-full-name</p>
+
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <ul>
+                <li>Skill1</li>
+                <li>Skill2</li>
+                <li>Skill3</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <p><span class="sub-title">University | College</span> CGPA: X.X | (Date)</p>
+            <p><span class="sub-title">XII (Board) | School</span> XX.X% | 20XX</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+            <p><span class="sub-title">Your Position | Company</span> (Date)</p>
+            <p>Work that you did - Technologies</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Academic Projects</h2>
+            <p><span class="sub-title">Project Title</span></p>
+            <p>Project details</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Position of Responsibility</h2>
+            <p><span class="sub-title">Society Title | Society, College</span> (Date - Present)</p>
+            <p>Organized hackathons & conducted sessions for 300+ college students on Web Development related topics.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Achievements / Hobbies</h2>
+            <p>Mention your achievements / Hobbies</p>
+        </div>
+    </div>
 </body>
 </html>
